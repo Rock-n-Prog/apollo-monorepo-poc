@@ -1,28 +1,23 @@
 # Apollo Monorepo POC
 
-
-Feature-heavy monorepo boilerplate for web and mobile apps, packed with tons of reusable code snippets and defined
-through a strong software architecture. Kind of inspired by
-[create-t3-turbo](https://github.com/t3-oss/create-t3-turbo).
+Example monorepo to use Apollo Federation in a Turborepo codebase.
 
 **See the [docs](./docs/README.md), for list of features, guides, explanations.**
 
 Made with love by [Fabien Roy](https://github.com/ExiledNarwal28).
 
-Check the [project board](https://github.com/orgs/treeview-app/projects/1/views/1) for what we want to do next.
-
 ## Status
 
-| Name             | Type    | Status                                                                                                                                                                                                                                  |
-| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| General          | General | [![General](https://github.com/treeview-app/treeview/actions/workflows/general.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/general.yml)                                                                  |
-| Web              | App     | [![Build Web App](https://github.com/treeview-app/treeview/actions/workflows/build-apps-web.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-apps-web.yml)                                              |
-| Database         | Package | [![Build Database Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-db.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-db.yml)                               |
-| Theme            | Package | [![Build Theme Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-theme.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-theme.yml)                            |
-| Web UI           | Package | [![Build Web UI Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-ui.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-ui.yml)                         |
-| Web Forms        | Package | [![Build Web Forms Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-forms.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-forms.yml)                |
-| Web Locales      | Package | [![Build Web Locales Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-locales.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-locales.yml)          |
-| Web Storage      | Package | [![Build Web Storage Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-storage.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-storage.yml)          |
+| Name        | Type    | Status                                                                                                                                                                                                                         |
+| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| General     | General | [![General](https://github.com/treeview-app/treeview/actions/workflows/general.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/general.yml)                                                         |
+| Web         | App     | [![Build Web App](https://github.com/treeview-app/treeview/actions/workflows/build-apps-web.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-apps-web.yml)                                     |
+| Database    | Package | [![Build Database Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-db.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-db.yml)                      |
+| Theme       | Package | [![Build Theme Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-theme.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-theme.yml)                   |
+| Web UI      | Package | [![Build Web UI Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-ui.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-ui.yml)                |
+| Web Forms   | Package | [![Build Web Forms Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-forms.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-forms.yml)       |
+| Web Locales | Package | [![Build Web Locales Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-locales.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-locales.yml) |
+| Web Storage | Package | [![Build Web Storage Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-storage.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-storage.yml) |
 
 ## Apps
 
