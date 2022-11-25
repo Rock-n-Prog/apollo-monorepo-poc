@@ -4,10 +4,10 @@
   "private": true,
   "workspaces": [
     "apps/*",
+    "services/*",
     "packages/*",
     "packages/config/*",
-    "packages/web/*",
-    "packages/mobile/*"
+    "packages/web/*"
   ],
   "engines": {
     "node": ">=14.0.0"

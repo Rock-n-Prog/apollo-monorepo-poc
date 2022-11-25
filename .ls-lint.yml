@@ -55,3 +55,6 @@ ignore:
   - packages/web/storage/node_modules
   - packages/web/ui/node_modules
   - packages/web/ui/storybook-static
+  - services/api-gateway/node_modules
+  - services/contents/node_modules
+  - services/reviews/node_modules
