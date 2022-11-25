@@ -19,6 +19,7 @@ const typeDefs = gql`
     }
 `;
 
+// TODO: Probably will need codegen for resolve types: https://the-guild.dev/graphql/codegen/plugins/typescript/typescript-resolvers
 const resolvers = {
   Query: {
     contents: () => contents,
