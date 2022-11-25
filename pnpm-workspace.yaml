@@ -1,6 +1,6 @@
 packages:
   - "apps/*"
+  - "services/*"
   - "packages/*"
   - "packages/config/*"
   - "packages/web/*"
-  - "packages/mobile/*"

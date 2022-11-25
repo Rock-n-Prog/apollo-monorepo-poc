@@ -1,8 +1,0 @@
-# dependencies
-node_modules
-
-# turborepo
-.turbo
-
-# node
-dist
