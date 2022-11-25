@@ -31,7 +31,8 @@ const resolvers = {
     reviews: () => reviews,
   },
   Content: {
-    reviews: (content) => reviews.filter(review => review.content.id === content.id),
+    // TODO: Remove any
+    reviews: (content: any) => reviews.filter(review => review.content.id === content.id),
   }
 };
 

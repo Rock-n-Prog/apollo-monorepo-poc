@@ -12,6 +12,7 @@ const typeDefs = gql`
     type Query {
         contents: [Content]
     }
+
     type Content @key(fields: "id") {
         id: ID!
         title: String
@@ -25,7 +26,8 @@ const resolvers = {
     contents: () => contents,
   },
   Content: {
-    __resolveReference: (content) => contents.find(c => c.id === content.id),
+    // TODO: Remove any
+    __resolveReference: (content: any) => contents.find(c => c.id === content.id),
   },
 };
 

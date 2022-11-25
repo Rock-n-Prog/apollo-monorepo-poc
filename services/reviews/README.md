@@ -1,11 +1,17 @@
-# ACME Theme Definition
+# ACME Reviews service
 
-Theme palette for ACME apps.
+GraphQL service for reviews subdomain.
 
 ## Setup
 
 ```bash
 pnpm install
+```
+
+## Start server
+
+```bash
+pnpm dev
 ```
 
 ## Available scripts

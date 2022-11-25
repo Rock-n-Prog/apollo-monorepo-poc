@@ -1,11 +1,17 @@
-# ACME Theme Definition
+# ACME Contents service
 
-Theme palette for ACME apps.
+GraphQL service for contents subdomain.
 
 ## Setup
 
 ```bash
 pnpm install
+```
+
+## Start server
+
+```bash
+pnpm dev
 ```
 
 ## Available scripts
