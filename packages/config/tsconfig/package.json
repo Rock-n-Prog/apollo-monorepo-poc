@@ -1,0 +1,12 @@
+{
+  "name": "@acme/tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "base.json",
+    "node.json",
+    "nextjs.json",
+    "expo.json",
+    "react-library.json"
+  ]
+}

@@ -1,0 +1,15 @@
+# dependencies
+node_modules
+
+# node
+dist
+
+# next.js
+.next
+build
+
+# expo
+.expo
+
+# storybook
+storybook-static

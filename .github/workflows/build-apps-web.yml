@@ -1,0 +1,71 @@
+name: Build Web App
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - develop
+    paths:
+      - '.github/workflows/build-apps-web.yml'
+      - 'apps/web/**'
+      - 'packages/db/**'
+      - 'packages/trpc/**'
+      - 'packages/theme/**'
+      - 'packages/web-ui/**'
+      - 'packages/web/forms/**'
+      - 'packages/web/locales/**'
+      - 'packages/web/storage/**'
+      - 'packages/config/eslint/**'
+      - 'packages/config/tsconfig/**'
+  pull_request:
+    branches:
+      - main
+      - develop
+    paths:
+      - '.github/workflows/build-apps-web.yml'
+      - 'apps/web/**'
+      - 'packages/db/**'
+      - 'packages/trpc/**'
+      - 'packages/theme/**'
+      - 'packages/web-ui/**'
+      - 'packages/web/forms/**'
+      - 'packages/web/locales/**'
+      - 'packages/web/storage/**'
+      - 'packages/config/eslint/**'
+      - 'packages/config/tsconfig/**'
+
+jobs:
+  build:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.9.5
+
+      - name: Install database dependencies
+        run: pnpm --filter @acme/db install
+
+      - name: Generate prisma client
+        run: pnpm --filter @acme/db generate
+
+      - name: Install dependencies
+        run: pnpm --filter @acme/web install
+
+      - name: Lint
+        run: pnpm --filter @acme/web lint
+
+      # TODO(#73): Re-add web CI build step
+      # - name: Build
+      #   run: pnpm --filter @acme/web build

@@ -1,0 +1,26 @@
+{
+  "name": "@acme/web-forms",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --max-warnings 0 --ext js,jsx,ts,tsx .",
+    "lint:fix": "eslint --max-warnings 0 --fix --ext js,jsx,ts,tsx ."
+  },
+  "dependencies": {
+    "@acme/web-ui": "workspace:*",
+    "next-i18next": "^13.0.0",
+    "react": "^18.2.0",
+    "react-dom": "18.2.0",
+    "react-is": "^18.2.0"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "workspace:*",
+    "@acme/tsconfig": "workspace:*",
+    "@babel/core": "^7.19.1",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "eslint": "^7.32.0",
+    "typescript": "^4.5.2",
+    "webpack": "^5.74.0"
+  }
+}

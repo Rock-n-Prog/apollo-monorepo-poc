@@ -1,0 +1,10 @@
+{
+  "acme": "ACME",
+  "back": "Back",
+  "language": "Language",
+  "loading": "Loading...",
+  "switchLocale": "Switch locale!",
+  "switchThemeMode": "Switch theme mode!",
+  "theme": "Theme",
+  "weGotError": "We got error: {{error}}"
+}

@@ -1,0 +1,7 @@
+{
+  "acme": "ACME",
+  "loading": "Loading...",
+  "switchLocale": "Switch locale!",
+  "switchThemeMode": "Switch theme mode!",
+  "weGotError": "We got error: {{error}}"
+}

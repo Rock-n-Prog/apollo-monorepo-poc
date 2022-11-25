@@ -1,0 +1,42 @@
+{
+  "name": "@acme/web-ui",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "lint": "pnpm lint:code && pnpm lint:styles",
+    "lint:code": "eslint --max-warnings 0 --ext js,jsx,ts,tsx .",
+    "lint:code:fix": "eslint --max-warnings 0 --fix --ext js,jsx,ts,tsx .",
+    "lint:fix": "pnpm lint:code:fix",
+    "lint:styles": "stylelint ./**/*.{js,jsx,ts,tsx}",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook",
+    "storybook:smoke-test": "start-storybook --smoke-test"
+  },
+  "dependencies": {
+    "@acme/web-storage": "workspace:*",
+    "@acme/theme": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "18.2.0",
+    "react-is": "^18.2.0",
+    "styled-components": "^5.3.5",
+    "styled-theming": "^2.2.0"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "workspace:*",
+    "@acme/stylelint-config": "workspace:*",
+    "@babel/core": "^7.19.1",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/react": "^6.5.12",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@types/styled-components": "^5.1.26",
+    "@types/styled-theming": "^2.2.5",
+    "eslint": "^7.32.0",
+    "require-from-string": "^2.0.2",
+    "storybook-dark-mode": "^1.1.2",
+    "stylelint": "^14.14.0",
+    "@acme/tsconfig": "workspace:*",
+    "typescript": "^4.5.2",
+    "webpack": "^5.74.0"
+  }
+}
