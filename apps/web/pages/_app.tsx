@@ -5,7 +5,6 @@ import { ThemeProvider } from '@acme/web-ui/contexts/ThemeProvider';
 import { Container } from '@acme/web-ui/components/layouts';
 import { SnackbarProvider } from '@acme/web-ui/contexts/SnackbarProvider';
 import { LocaleProvider } from '../contexts/LocaleProvider';
-import { trpc } from '../utils/trpc';
 import { Toolbar } from '../components/dev-tools/Toolbar';
 
 function App({ Component, pageProps }: AppProps) {
@@ -23,4 +22,4 @@ function App({ Component, pageProps }: AppProps) {
   );
 }
 
-export default trpc.withTRPC(appWithTranslation(App));
+export default appWithTranslation(App);

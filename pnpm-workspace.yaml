@@ -3,4 +3,4 @@ packages:
   - "packages/*"
   - "packages/config/*"
   - "packages/web/*"
-  - "packages/mobile/*"
+  - "packages/services/*"
