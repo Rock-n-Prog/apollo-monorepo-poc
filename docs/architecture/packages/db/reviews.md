@@ -1,6 +1,6 @@
-# Database
+# Reviews Database
 
-Library is located at [`packages/db`](../../../packages/db).
+Library is located at [`packages/db/reviews`](../../../../packages/db/reviews).
 
 ## Software architecture
 

@@ -1,8 +1,8 @@
-# ACME Database
+# ACME Contents Database
 
-MySQL database accessible using Prisma.
+MySQL database accessible using Prisma for contents data.
 
-**See root's [`README.md`](../../README.md) for info on running and linking a local Docker container for database.**
+**See root's [`README.md`](../../../README.md) for info on running and linking a local Docker container for database.**
 
 ## Setup
 

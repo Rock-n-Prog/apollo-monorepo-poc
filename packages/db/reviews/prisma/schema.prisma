@@ -10,9 +10,11 @@ generator client {
   output          = "../../../node_modules/.prisma/client"
 }
 
-model User {
+model Review {
   id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
-  emailVerified DateTime?
+  contentId     String
+  title         String
+  year          Int
+  score         Float
+  comments      String[]
 }

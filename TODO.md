@@ -7,7 +7,7 @@ POC - TODO
 
 - Link database
 
-  - Separate Docker Compose and db package into two databases
+  - Test and document db packages
   - Use them accordingly in services
 
 - Use GQL in web app
