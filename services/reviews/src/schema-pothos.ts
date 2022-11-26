@@ -9,21 +9,31 @@ const builder = new SchemaBuilder<{
   plugins: [DirectivesPlugin, FederationPlugin],
 });
 
-type Content = {
+type Review = {
   readonly id: string;
-  readonly title: string;
-  readonly year: number;
+  readonly score: number;
+  readonly comments?: readonly string[];
 };
 
-const ContentType = builder.objectRef<Content>('Content').implement({
+const ReviewType = builder.objectRef<Review>('Review').implement({
   fields: t => ({
     id: t.exposeID('id'),
-    title: t.exposeString('title'),
-    year: t.exposeInt('year'),
+    score: t.exposeFloat('score'),
+    comments: t.stringList({
+      resolve: (review, _args, ctx) =>
+        ctx.prisma.comment
+          .findMany({
+            where: {
+              reviewId: review.id,
+            },
+          })
+          .then(comments => comments.map(c => c.title)),
+    }),
   }),
 });
 
-// TODO: Is this necessary?
+// TODO: Federation resolvers
+/*
 builder.asEntity(ContentType, {
   key: builder.selection<{ readonly id: string }>('id'),
   resolveReference: (args, ctx) =>
@@ -33,25 +43,26 @@ builder.asEntity(ContentType, {
       },
     }),
 });
+*/
 
 builder.queryType({
   fields: t => ({
-    content: t.field({
-      type: ContentType,
+    review: t.field({
+      type: ReviewType,
       nullable: true,
       args: {
         id: t.arg.string({ required: true }),
       },
       resolve: (_root, args, ctx) =>
-        ctx.prisma.content.findUnique({
+        ctx.prisma.review.findUnique({
           where: {
             id: args.id,
           },
         }),
     }),
-    contents: t.field({
-      type: [ContentType],
-      resolve: (_root, _args, ctx) => ctx.prisma.content.findMany(),
+    reviews: t.field({
+      type: [ReviewType],
+      resolve: (_root, _args, ctx) => ctx.prisma.review.findMany(),
     }),
   }),
 });
