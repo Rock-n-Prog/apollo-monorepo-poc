@@ -1,5 +1,5 @@
 import { ApolloServer } from 'apollo-server';
-import { schema } from './schema-pothos';
+import { schema } from './schema';
 import { createContext } from './context';
 
 const server = new ApolloServer({

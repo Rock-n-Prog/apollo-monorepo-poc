@@ -98,7 +98,9 @@ pnpm dev:mobile
 pnpm dev
 
 pnpm dev:services
-pnpm dev:web
+
+# Run after services
+pnpm dev:api
 ```
 
 ### Run storybook

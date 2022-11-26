@@ -23,15 +23,20 @@ const ContentType = builder.objectRef<Content>('Content').implement({
   }),
 });
 
-// TODO: Is this necessary?
-builder.asEntity(ContentType, {
-  key: builder.selection<{ readonly id: string }>('id'),
-  resolveReference: (args, ctx) =>
-    ctx.prisma.content.findUnique({
-      where: {
-        id: args.id,
-      },
+builder.externalRef('Review', builder.selection<{ readonly contentId: string }>('contentId')).implement({
+  fields: t => ({
+    contentId: t.exposeID('contentId'),
+    content: t.field({
+      type: ContentType,
+      nullable: true,
+      resolve: (review, args, ctx) =>
+        ctx.prisma.content.findUnique({
+          where: {
+            id: review.contentId,
+          },
+        }),
     }),
+  }),
 });
 
 builder.queryType({

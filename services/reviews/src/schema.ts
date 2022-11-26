@@ -11,6 +11,7 @@ const builder = new SchemaBuilder<{
 
 type Review = {
   readonly id: string;
+  readonly contentId: string;
   readonly score: number;
   readonly comments?: readonly string[];
 };
@@ -18,6 +19,7 @@ type Review = {
 const ReviewType = builder.objectRef<Review>('Review').implement({
   fields: t => ({
     id: t.exposeID('id'),
+    contentId: t.exposeID('contentId'),
     score: t.exposeFloat('score'),
     comments: t.stringList({
       resolve: (review, _args, ctx) =>
@@ -32,18 +34,20 @@ const ReviewType = builder.objectRef<Review>('Review').implement({
   }),
 });
 
-// TODO: Federation resolvers
-/*
-builder.asEntity(ContentType, {
-  key: builder.selection<{ readonly id: string }>('id'),
-  resolveReference: (args, ctx) =>
-    ctx.prisma.content.findUnique({
-      where: {
-        id: args.id,
-      },
+builder.externalRef('Content', builder.selection<{ readonly id: string }>('id')).implement({
+  fields: t => ({
+    id: t.exposeID('id'),
+    reviews: t.field({
+      type: [ReviewType],
+      resolve: (content, args, ctx) =>
+        ctx.prisma.review.findMany({
+          where: {
+            contentId: content.id,
+          },
+        }),
     }),
+  }),
 });
-*/
 
 builder.queryType({
   fields: t => ({
