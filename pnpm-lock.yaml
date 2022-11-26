@@ -352,6 +352,10 @@ importers:
       '@acme/eslint-config': workspace:*
       '@acme/tsconfig': workspace:*
       '@apollo/federation': ^0.38.1
+      '@apollo/subgraph': ^2.2.1
+      '@pothos/core': ^3.23.0
+      '@pothos/plugin-directives': ^3.9.0
+      '@pothos/plugin-federation': ^3.7.0
       '@types/node': ^18.11.9
       apollo-server: ^3.11.1
       eslint: ^8.23.1
@@ -361,6 +365,10 @@ importers:
       typescript: ^4.9.3
     dependencies:
       '@apollo/federation': 0.38.1_graphql@16.6.0
+      '@apollo/subgraph': 2.2.1_graphql@16.6.0
+      '@pothos/core': 3.23.0_graphql@16.6.0
+      '@pothos/plugin-directives': 3.9.0_graphql@16.6.0
+      '@pothos/plugin-federation': 3.7.0_5w5dqbjp32p4ef23bsjsc2stdq
       apollo-server: 3.11.1_graphql@16.6.0
       graphql: 16.6.0
     devDependencies:
@@ -377,6 +385,10 @@ importers:
       '@acme/eslint-config': workspace:*
       '@acme/tsconfig': workspace:*
       '@apollo/federation': ^0.38.1
+      '@apollo/subgraph': ^2.2.1
+      '@pothos/core': ^3.23.0
+      '@pothos/plugin-directives': ^3.9.0
+      '@pothos/plugin-federation': ^3.7.0
       '@types/node': ^18.11.9
       apollo-server: ^3.11.1
       eslint: ^8.23.1
@@ -386,6 +398,10 @@ importers:
       typescript: ^4.9.3
     dependencies:
       '@apollo/federation': 0.38.1_graphql@16.6.0
+      '@apollo/subgraph': 2.2.1_graphql@16.6.0
+      '@pothos/core': 3.23.0_graphql@16.6.0
+      '@pothos/plugin-directives': 3.9.0_graphql@16.6.0
+      '@pothos/plugin-federation': 3.7.0_5w5dqbjp32p4ef23bsjsc2stdq
       apollo-server: 3.11.1_graphql@16.6.0
       graphql: 16.6.0
     devDependencies:
@@ -568,6 +584,17 @@ packages:
       graphql: ^15.8.0 || ^16.0.0
     dependencies:
       '@apollo/cache-control-types': 1.0.2_graphql@16.6.0
+      graphql: 16.6.0
+    dev: false
+
+  /@apollo/subgraph/2.2.1_graphql@16.6.0:
+    resolution: {integrity: sha512-fAm7KXr54/5mDA2mhR36AI8rwiaPGHpT9s51t8mOpnKNpX8vc9KrdlPqCAF88LKVxKRZBDTNjlD5sRgx0tQl5w==}
+    engines: {node: '>=14.15.0'}
+    peerDependencies:
+      graphql: ^16.5.0
+    dependencies:
+      '@apollo/cache-control-types': 1.0.2_graphql@16.6.0
+      '@apollo/federation-internals': 2.2.1_graphql@16.6.0
       graphql: 16.6.0
     dev: false
 
@@ -2950,6 +2977,32 @@ packages:
       source-map: 0.7.4
       webpack: 5.74.0
     dev: true
+
+  /@pothos/core/3.23.0_graphql@16.6.0:
+    resolution: {integrity: sha512-UIpidfMYu6+Y1yjET+h4uIMwt2mtSDKG6iHvdyXFAzB/HSksbm1IG2SyDKtR7o22U17CkDrpc3kGrflss4Oyaw==}
+    peerDependencies:
+      graphql: '>=15.1.0'
+    dependencies:
+      graphql: 16.6.0
+    dev: false
+
+  /@pothos/plugin-directives/3.9.0_graphql@16.6.0:
+    resolution: {integrity: sha512-/Ry+8/h3fygZ4L1m8HDoL5STSKLUGQyd7JazRG7P87dW2RP9Tq3Ag28u1N6UKXhoaTJYz/HVxPRKTZnNXHgUfw==}
+    peerDependencies:
+      graphql: '>=15.1.0'
+    dependencies:
+      graphql: 16.6.0
+    dev: false
+
+  /@pothos/plugin-federation/3.7.0_5w5dqbjp32p4ef23bsjsc2stdq:
+    resolution: {integrity: sha512-j9kyw27M6R7r9cCZrwoKFLkSAnmpvmbiVKNDcOaHG4+lVCLzYXjUQMbXhwpD2y/SRTYU6a/nXxtmj8ar37XqaQ==}
+    peerDependencies:
+      '@apollo/subgraph': ^2.0.0
+      graphql: '>=15.1.0'
+    dependencies:
+      '@apollo/subgraph': 2.2.1_graphql@16.6.0
+      graphql: 16.6.0
+    dev: false
 
   /@prisma/client/4.4.0_prisma@4.4.0:
     resolution: {integrity: sha512-ciKOP246x1xwr04G9ajHlJ4pkmtu9Q6esVyqVBO0QJihaKQIUvbPjClp17IsRJyxqNpFm4ScbOc/s9DUzKHINQ==}

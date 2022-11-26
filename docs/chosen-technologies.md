@@ -59,6 +59,10 @@ Here's what we decided to use.
 - [Apollo](https://www.apollographql.com)
 - [react-query](https://tanstack.com/query/v4/docs/adapters/react-query)
 
+### Schema Builder
+
+- [Pothos GraphQL](https://pothos-graphql.dev)
+
 ### Supergraph Manager
 
 - [Apollo Federation](https://www.apollographql.com/apollo-federation)

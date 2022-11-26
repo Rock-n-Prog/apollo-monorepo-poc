@@ -10,6 +10,10 @@
   },
   "dependencies": {
     "@apollo/federation": "^0.38.1",
+    "@apollo/subgraph": "^2.2.1",
+    "@pothos/core": "^3.23.0",
+    "@pothos/plugin-directives": "^3.9.0",
+    "@pothos/plugin-federation": "^3.7.0",
     "apollo-server": "^3.11.1",
     "graphql": "^16.6.0"
   },
