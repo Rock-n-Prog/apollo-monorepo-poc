@@ -4,10 +4,7 @@ POC - TODO
 
   - Safe types in resolvers (services)
   - Env vars for props
-
-- Link database
-
-  - Use them accordingly in services
+  - Script for copying .env.example (or .env.local?) to .env
 
 - Use GQL in web app
 

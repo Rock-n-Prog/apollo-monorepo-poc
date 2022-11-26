@@ -4,7 +4,7 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc -w && nodemon dist/index.js",
-    "dev": "ts-node index.ts",
+    "dev": "ts-node src/server.ts",
     "lint": "eslint --max-warnings 0 --ext js,ts .",
     "lint:fix": "eslint --max-warnings 0 --fix --ext js,ts ."
   },

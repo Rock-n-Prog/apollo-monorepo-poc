@@ -8,6 +8,7 @@ on:
       - develop
     paths:
       - '.github/workflows/build-services-reviews.yml'
+      - 'packages/db/reviews/**'
       - 'services/reviews/**'
       - 'packages/config/eslint/**'
       - 'packages/config/tsconfig/**'
@@ -17,6 +18,7 @@ on:
       - develop
     paths:
       - '.github/workflows/build-services-reviews.yml'
+      - 'packages/db/reviews/**'
       - 'services/reviews/**'
       - 'packages/config/eslint/**'
       - 'packages/config/tsconfig/**'
@@ -39,6 +41,12 @@ jobs:
       - uses: pnpm/action-setup@v2.2.2
         with:
           version: 7.9.5
+
+      - name: Install database dependencies
+        run: pnpm --filter @acme/reviews-db install
+
+      - name: Generate prisma client
+        run: pnpm --filter @acme/reviews-db generate
 
       - name: Install dependencies
         run: pnpm --filter @acme/reviews-service install
