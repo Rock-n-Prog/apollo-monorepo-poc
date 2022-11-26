@@ -11,9 +11,7 @@ Here's what we decided to use.
 ### Frameworks
 
 - [Next.js](https://nextjs.org)
-- [Expo](https://docs.expo.dev)
 - [React](https://reactjs.org)
-- [React Native](https://reactnative.dev)
 
 ### Compilers / transpilers
 
@@ -22,7 +20,6 @@ Here's what we decided to use.
 ### Bundlers
 
 - [Webpack](https://webpack.js.org)
-- [Metro](https://facebook.github.io/metro)
 - [tsup](https://github.com/egoist/tsup)
 
 ### Form management
@@ -58,8 +55,13 @@ Here's what we decided to use.
 
 ### API Communication
 
-- [tRPC](https://trpc.io)
+- [GraphQL](https://graphql.org)
+- [Apollo](https://www.apollographql.com)
 - [react-query](https://tanstack.com/query/v4/docs/adapters/react-query)
+
+### Supergraph Manager
+
+- [Apollo Federation](https://www.apollographql.com/apollo-federation)
 
 ### ORM
 
