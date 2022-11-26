@@ -9,14 +9,14 @@ const resolvers = {
   },
   Review: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    comments: async (review: any, _args: any, ctx: Context) => {
-      const comments = await ctx.prisma.comment.findMany({
-        where: {
-          reviewId: review.id,
-        },
-      });
-      return comments.map(c => c.title);
-    },
+    comments: (review: any, _args: any, ctx: Context) =>
+      ctx.prisma.comment
+        .findMany({
+          where: {
+            reviewId: review.id,
+          },
+        })
+        .then(comments => comments.map(c => c.title)),
   },
   Content: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
