@@ -11,6 +11,9 @@ Consumes the following services:
 
 ```bash
 pnpm install
+
+# Copy env vars
+pnpm env:local
 ```
 
 ## Start server

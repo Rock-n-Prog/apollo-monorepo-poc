@@ -329,6 +329,7 @@ importers:
       '@apollo/gateway': ^2.2.1
       '@types/node': ^18.11.9
       apollo-server: ^3.11.1
+      dotenv: ^16.0.3
       eslint: ^8.23.1
       graphql: ^16.6.0
       nodemon: ^2.0.20
@@ -337,6 +338,7 @@ importers:
     dependencies:
       '@apollo/gateway': 2.2.1_graphql@16.6.0
       apollo-server: 3.11.1_graphql@16.6.0
+      dotenv: 16.0.3
       graphql: 16.6.0
     devDependencies:
       '@acme/eslint-config': link:../../packages/config/eslint
@@ -358,6 +360,7 @@ importers:
       '@pothos/plugin-federation': ^3.7.0
       '@types/node': ^18.11.9
       apollo-server: ^3.11.1
+      dotenv: ^16.0.3
       eslint: ^8.23.1
       graphql: ^16.6.0
       nodemon: ^2.0.20
@@ -370,6 +373,7 @@ importers:
       '@pothos/plugin-directives': 3.9.0_graphql@16.6.0
       '@pothos/plugin-federation': 3.7.0_5w5dqbjp32p4ef23bsjsc2stdq
       apollo-server: 3.11.1_graphql@16.6.0
+      dotenv: 16.0.3
       graphql: 16.6.0
     devDependencies:
       '@acme/eslint-config': link:../../packages/config/eslint
@@ -391,6 +395,7 @@ importers:
       '@pothos/plugin-federation': ^3.7.0
       '@types/node': ^18.11.9
       apollo-server: ^3.11.1
+      dotenv: ^16.0.3
       eslint: ^8.23.1
       graphql: ^16.6.0
       nodemon: ^2.0.20
@@ -403,6 +408,7 @@ importers:
       '@pothos/plugin-directives': 3.9.0_graphql@16.6.0
       '@pothos/plugin-federation': 3.7.0_5w5dqbjp32p4ef23bsjsc2stdq
       apollo-server: 3.11.1_graphql@16.6.0
+      dotenv: 16.0.3
       graphql: 16.6.0
     devDependencies:
       '@acme/eslint-config': link:../../packages/config/eslint
@@ -7300,6 +7306,11 @@ packages:
   /dotenv-expand/5.1.0:
     resolution: {integrity: sha512-YXQl1DSa4/PQyRfgrv6aoNjhasp/p4qs9FjJ4q4cQk+8m4r6k4ZSiEyytKG8f8W9gi8WsQtIObNmKd+tMzNTmA==}
     dev: true
+
+  /dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
+    dev: false
 
   /dotenv/8.6.0:
     resolution: {integrity: sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==}

@@ -23,6 +23,7 @@
     "dev:api": "turbo run dev --filter @acme/api-gateway",
     "dev:services": "turbo run dev --parallel --filter @acme/*-service",
     "dev:web": "turbo run dev --filter @acme/web",
+    "env:local": "turbo run env:local",
     "format": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,md,yml}\"",
     "format:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md,yml}\"",
     "lint": "pnpm run lint:root && turbo run lint",

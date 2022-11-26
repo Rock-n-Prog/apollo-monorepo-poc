@@ -5,6 +5,7 @@
     "build": "tsc",
     "build:watch": "tsc -w && nodemon dist/index.js",
     "dev": "ts-node src/server.ts",
+    "env:local": "cp .env.local .env",
     "lint": "eslint --max-warnings 0 --ext js,ts .",
     "lint:fix": "eslint --max-warnings 0 --fix --ext js,ts ."
   },
@@ -15,6 +16,7 @@
     "@pothos/plugin-directives": "^3.9.0",
     "@pothos/plugin-federation": "^3.7.0",
     "apollo-server": "^3.11.1",
+    "dotenv": "^16.0.3",
     "graphql": "^16.6.0"
   },
   "devDependencies": {

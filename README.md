@@ -64,8 +64,7 @@ pnpm prepare
 
 ```bash
 # Copy env file
-cp packages/db/contents/.env.example packages/db/contents/.env
-cp packages/db/reviews/.env.example packages/db/reviews/.env
+pnpm env:local
 
 # Run databases
 docker compose up

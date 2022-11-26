@@ -1,10 +1,12 @@
 import { ApolloServer } from 'apollo-server';
 import { ApolloGateway } from '@apollo/gateway';
+import * as dotenv from 'dotenv';
 
-// TODO: Get services URL from env vars
+dotenv.config();
+
 const serviceList = [
-  { name: 'contents', url: 'http://localhost:4001' },
-  { name: 'reviews', url: 'http://localhost:4002' },
+  { name: 'contents', url: process.env.CONTENTS_URL },
+  { name: 'reviews', url: process.env.REVIEWS_URL },
 ];
 
 const gateway = new ApolloGateway({ serviceList });
