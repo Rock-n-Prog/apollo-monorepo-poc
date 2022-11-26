@@ -110,7 +110,7 @@ importers:
   packages/config/tsconfig:
     specifiers: {}
 
-  packages/db:
+  packages/db/contents:
     specifiers:
       '@acme/eslint-config': workspace:*
       '@acme/tsconfig': workspace:*
@@ -125,15 +125,40 @@ importers:
     dependencies:
       '@prisma/client': 4.4.0_prisma@4.4.0
     devDependencies:
-      '@acme/eslint-config': link:../config/eslint
-      '@acme/tsconfig': link:../config/tsconfig
-      '@types/node': 18.7.23
+      '@acme/eslint-config': link:../../config/eslint
+      '@acme/tsconfig': link:../../config/tsconfig
+      '@types/node': 18.11.9
       config: 3.3.8
       eslint: 8.23.1
       prisma: 4.4.0
-      tsup: 6.2.3_typescript@4.8.3
+      tsup: 6.2.3_typescript@4.9.3
       tsx: 3.9.0
-      typescript: 4.8.3
+      typescript: 4.9.3
+
+  packages/db/reviews:
+    specifiers:
+      '@acme/eslint-config': workspace:*
+      '@acme/tsconfig': workspace:*
+      '@prisma/client': ^4.3.1
+      '@types/node': ^18.7.18
+      config: ^3.3.8
+      eslint: ^8.23.1
+      prisma: ^4.3.1
+      tsup: ^6.2.3
+      tsx: ^3.9.0
+      typescript: ^4.8.3
+    dependencies:
+      '@prisma/client': 4.4.0_prisma@4.4.0
+    devDependencies:
+      '@acme/eslint-config': link:../../config/eslint
+      '@acme/tsconfig': link:../../config/tsconfig
+      '@types/node': 18.11.9
+      config: 3.3.8
+      eslint: 8.23.1
+      prisma: 4.4.0
+      tsup: 6.2.3_typescript@4.9.3
+      tsx: 3.9.0
+      typescript: 4.9.3
 
   packages/theme:
     specifiers:
@@ -14009,7 +14034,7 @@ packages:
   /tslib/2.4.0:
     resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
 
-  /tsup/6.2.3_typescript@4.8.3:
+  /tsup/6.2.3_typescript@4.9.3:
     resolution: {integrity: sha512-J5Pu2Dx0E1wlpIEsVFv9ryzP1pZ1OYsJ2cBHZ7GrKteytNdzaSz5hmLX7/nAxtypq+jVkVvA79d7S83ETgHQ5w==}
     engines: {node: '>=14'}
     hasBin: true
@@ -14039,7 +14064,7 @@ packages:
       source-map: 0.8.0-beta.0
       sucrase: 3.27.0
       tree-kill: 1.2.2
-      typescript: 4.8.3
+      typescript: 4.9.3
     transitivePeerDependencies:
       - supports-color
       - ts-node

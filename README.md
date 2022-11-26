@@ -8,19 +8,20 @@ Made with love by [Fabien Roy](https://github.com/ExiledNarwal28).
 
 ## Status
 
-| Name             | Type    | Status                                                                                                                                                                                                                                             |
-| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| General          | General | [![General](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/general.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/general.yml)                                                         |
-| Web              | App     | [![Build Web App](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-apps-web.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-apps-web.yml)                                     |
-| API Gateway      | Service | [![Build API Gateway](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-services-api-gateway.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-services-api-gateway.yml)         |
-| Reviews Service  | Service | [![Build Reviews Service Gateway](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-services-reviews.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-services-reviews.yml)     |
-| Contents Service | Service | [![Build Contents Service Gateway](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-services-contents.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-services-contents.yml)  |
-| Database         | Package | [![Build Database Package](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-db.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-db.yml)                      |
-| Theme            | Package | [![Build Theme Package](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-theme.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-theme.yml)                   |
-| Web UI           | Package | [![Build Web UI Package](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-web-ui.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-web-ui.yml)                |
-| Web Forms        | Package | [![Build Web Forms Package](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-web-forms.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-web-forms.yml)       |
-| Web Locales      | Package | [![Build Web Locales Package](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-web-locales.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-web-locales.yml) |
-| Web Storage      | Package | [![Build Web Storage Package](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-web-storage.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-web-storage.yml) |
+| Name              | Type    | Status                                                                                                                                                                                                                                                   |
+| ----------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| General           | General | [![General](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/general.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/general.yml)                                                               |
+| Web               | App     | [![Build Web App](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-apps-web.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-apps-web.yml)                                           |
+| API Gateway       | Service | [![Build API Gateway](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-services-api-gateway.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-services-api-gateway.yml)               |
+| Contents Service  | Service | [![Build Contents Service Gateway](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-services-contents.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-services-contents.yml)        |
+| Reviews Service   | Service | [![Build Reviews Service Gateway](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-services-reviews.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-services-reviews.yml)           |
+| Contents Database | Package | [![Build Contents Database Package](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-contents-db.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-contents-db.yml) |
+| Reviews Database  | Package | [![Build Reviews Database Package](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-reviews-db.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-reviews-db.yml)    |
+| Theme             | Package | [![Build Theme Package](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-theme.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-theme.yml)                         |
+| Web UI            | Package | [![Build Web UI Package](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-web-ui.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-web-ui.yml)                      |
+| Web Forms         | Package | [![Build Web Forms Package](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-web-forms.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-web-forms.yml)             |
+| Web Locales       | Package | [![Build Web Locales Package](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-web-locales.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-web-locales.yml)       |
+| Web Storage       | Package | [![Build Web Storage Package](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-web-storage.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-packages-web-storage.yml)       |
 
 ## Apps
 
@@ -34,8 +35,9 @@ Made with love by [Fabien Roy](https://github.com/ExiledNarwal28).
 
 ## Packages
 
-- [`packages/db`](packages/db): Prisma client and models definitions
 - [`packages/theme`](packages/theme): Theme definition
+- [`packages/db/contents`](packages/db/contents): Prisma client and models definitions for contents data
+- [`packages/db/reviews`](packages/db/reviews): Prisma client and models definitions for reviews data
 - [`packages/web/ui`](packages/web/ui): React components for web app
 - [`packages/web/forms`](packages/web/forms): React form-specific components for forms app
 - [`packages/web/locales`](packages/web/locales): Locale translations for web app
@@ -62,13 +64,17 @@ pnpm prepare
 
 ```bash
 # Copy env file
-cp packages/db/.env.example packages/db/.env
+cp packages/db/contents/.env.example packages/db/contents/.env
+cp packages/db/reviews/.env.example packages/db/reviews/.env
 
-# Run database
+# Run databases
 docker compose up
 
 # Generate Prisma client
 pnpm db:generate
+
+# Apply migrations
+pnpm db:migrate:dev
 
 # If wanted, generate example data
 pnpm db:seed

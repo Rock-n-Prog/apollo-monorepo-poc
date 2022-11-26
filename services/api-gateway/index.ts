@@ -3,8 +3,8 @@ import { ApolloGateway } from '@apollo/gateway';
 
 // TODO: Get services URL from env vars
 const serviceList = [
-  { name: 'content', url: 'http://localhost:4001' },
-  { name: 'review', url: 'http://localhost:4002' },
+  { name: 'contents', url: 'http://localhost:4001' },
+  { name: 'reviews', url: 'http://localhost:4002' },
 ];
 
 const gateway = new ApolloGateway({ serviceList });

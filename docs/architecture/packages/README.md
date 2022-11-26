@@ -2,6 +2,6 @@
 
 Configs are omitted, as they are pretty self-explanatory.
 
-- [Database](./db.md)
 - [Theme](./theme.md)
+- [Database libraries](./db/README.md)
 - [Web libraries](./web/README.md)

@@ -14,11 +14,12 @@
       "dependsOn": ["^build"],
       "cache": false
     },
-    "@acme/db#@migrate:*": {
-      "env": ["DATABASE_URL"],
-      "dependsOn": []
-    },
     "generate": {
+      "outputs": []
+    },
+    "migrate:dev": {
+      "dependsOn": ["^generate"],
+      "env": ["DATABASE_URL"],
       "outputs": []
     },
     "seed": {

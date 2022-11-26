@@ -1,5 +1,5 @@
 {
-  "name": "@acme/db",
+  "name": "@acme/reviews-db",
   "version": "0.0.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -17,7 +17,6 @@
     "migrate:deploy": "prisma migrate deploy",
     "migrate:dev": "prisma migrate dev",
     "prebuild": "pnpm run generate",
-    "predev": "pnpm run generate",
     "push": "prisma db push",
     "seed": "tsx src/seed.ts",
     "studio": "prisma studio"

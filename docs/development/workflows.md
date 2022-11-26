@@ -4,7 +4,11 @@ We currently have the following workflows:
 
 - [General](../../.github/workflows/general.yml)
 - [Build Web App](../../.github/workflows/build-apps-web.yml)
-- [Build Database Package](../../.github/workflows/build-packages-db.yml)
+- [Build API Gateway](../../.github/workflows/build-services-api-gateway.yml)
+- [Build Contents Service](../../.github/workflows/build-services-contents.yml)
+- [Build Reviews Service](../../.github/workflows/build-services-reviews.yml)
+- [Build Contents Database Package](../../.github/workflows/build-packages-contents-db.yml)
+- [Build Reviews Database Package](../../.github/workflows/build-packages-reviews-db.yml)
 - [Build Theme Package](../../.github/workflows/build-packages-theme.yml)
 - [Build Web UI Package](../../.github/workflows/build-packages-web-ui.yml)
 - [Build Web Forms Package](../../.github/workflows/build-packages-web-forms.yml)

@@ -1,0 +1,15 @@
+datasource db {
+  provider             = "mysql"
+  url                  = env("DATABASE_URL")
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  output          = "../../../../node_modules/.prisma/client/contents"
+}
+
+model Content {
+  id            String    @id @default(cuid())
+  title         String
+  year          Int
+}

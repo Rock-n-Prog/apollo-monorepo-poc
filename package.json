@@ -7,7 +7,8 @@
     "services/*",
     "packages/*",
     "packages/config/*",
-    "packages/web/*"
+    "packages/web/*",
+    "packages/db/*"
   ],
   "engines": {
     "node": ">=14.0.0"
@@ -15,8 +16,9 @@
   "packageManager": "pnpm@7.9.5",
   "scripts": {
     "build": "turbo run build",
-    "db:generate": "turbo run generate --filter @acme/db",
-    "db:seed": "turbo run seed --filter @acme/db",
+    "db:generate": "turbo run generate --filter @acme/*-db",
+    "db:migrate:dev": "turbo run migrate:dev --filter @acme/*-db",
+    "db:seed": "turbo run seed --filter @acme/*-db",
     "dev": "turbo run dev:services dev:web --parralel",
     "dev:services": "turbo run dev --filter @acme/api-gateway --filter @acme/*-service",
     "dev:web": "turbo run dev --filter @acme/web",
@@ -63,8 +65,11 @@
     "services/contents/**/*.{js,ts}": [
       "eslint --max-warnings 0 --fix services/contents/**/*.{js,ts}"
     ],
-    "packages/db/**/*.{js,ts}": [
-      "eslint --max-warnings 0 --fix packages/db/**/*.{js,ts}"
+    "packages/db/contents/**/*.{js,ts}": [
+      "eslint --max-warnings 0 --fix packages/db/contents/**/*.{js,ts}"
+    ],
+    "packages/db/reviews/**/*.{js,ts}": [
+      "eslint --max-warnings 0 --fix packages/db/reviews/**/*.{js,ts}"
     ],
     "packages/theme/**/*.{js,ts}": [
       "eslint --max-warnings 0 --fix packages/theme/**/*.{js,ts}"
