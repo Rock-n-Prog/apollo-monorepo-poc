@@ -10,6 +10,10 @@
       "outputs": [".next/**"],
       "env": ["NODE_ENV", "VERCEL_URL", "RENDER_INTERNAL_HOSTNAME", "PORT"]
     },
+    "dev": {
+      "dependsOn": ["^build"],
+      "cache": false
+    },
     "@acme/db#@migrate:*": {
       "env": ["DATABASE_URL"],
       "dependsOn": []
@@ -25,10 +29,6 @@
     },
     "lint:fix": {
       "outputs": []
-    },
-    "dev": {
-      "dependsOn": ["^build"],
-      "cache": false
     },
     "storybook": {
       "outputs": []

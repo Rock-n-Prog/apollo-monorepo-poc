@@ -8,16 +8,19 @@ Made with love by [Fabien Roy](https://github.com/ExiledNarwal28).
 
 ## Status
 
-| Name        | Type    | Status                                                                                                                                                                                                                         |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| General     | General | [![General](https://github.com/treeview-app/treeview/actions/workflows/general.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/general.yml)                                                         |
-| Web         | App     | [![Build Web App](https://github.com/treeview-app/treeview/actions/workflows/build-apps-web.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-apps-web.yml)                                     |
-| Database    | Package | [![Build Database Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-db.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-db.yml)                      |
-| Theme       | Package | [![Build Theme Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-theme.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-theme.yml)                   |
-| Web UI      | Package | [![Build Web UI Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-ui.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-ui.yml)                |
-| Web Forms   | Package | [![Build Web Forms Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-forms.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-forms.yml)       |
-| Web Locales | Package | [![Build Web Locales Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-locales.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-locales.yml) |
-| Web Storage | Package | [![Build Web Storage Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-storage.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-storage.yml) |
+| Name             | Type    | Status                                                                                                                                                                                                                         |
+| ---------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| General          | General | [![General](https://github.com/treeview-app/treeview/actions/workflows/general.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/general.yml)                                                         |
+| Web              | App     | [![Build Web App](https://github.com/treeview-app/treeview/actions/workflows/build-apps-web.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-apps-web.yml)                                     |
+| API Gateway      | Service | [![Build API Gateway](https://github.com/treeview-app/treeview/actions/workflows/build-services-api-gateway.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-services-api-gateway.yml)         |
+| Reviews Service  | Service | [![Build Reviews Service Gateway](https://github.com/treeview-app/treeview/actions/workflows/build-services-reviews.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-services-reviews.yml)     |
+| Contents Service | Service | [![Build Contents Service Gateway](https://github.com/treeview-app/treeview/actions/workflows/build-services-contents.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-services-contents.yml)  |
+| Database         | Package | [![Build Database Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-db.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-db.yml)                      |
+| Theme            | Package | [![Build Theme Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-theme.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-theme.yml)                   |
+| Web UI           | Package | [![Build Web UI Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-ui.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-ui.yml)                |
+| Web Forms        | Package | [![Build Web Forms Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-forms.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-forms.yml)       |
+| Web Locales      | Package | [![Build Web Locales Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-locales.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-locales.yml) |
+| Web Storage      | Package | [![Build Web Storage Package](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-storage.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-packages-web-storage.yml) |
 
 ## Apps
 
@@ -73,7 +76,7 @@ pnpm db:seed
 
 ## Available scripts
 
-### Run apps
+### Run services
 
 ```bash
 pnpm dev
@@ -81,6 +84,15 @@ pnpm dev
 # Running a single app and its deps
 pnpm dev:web
 pnpm dev:mobile
+```
+
+### Run services / apps
+
+```bash
+pnpm dev
+
+pnpm dev:services
+pnpm dev:web
 ```
 
 ### Run storybook

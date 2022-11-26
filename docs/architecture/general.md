@@ -25,3 +25,7 @@ For more info, see Turborepo file structure.
     - `eslint`: Set of eslint configs for given technologies
     - `stylelint`: Set of stylelint configs for given technologies
     - `tsconfig`: Set of TypeScript configs for given technologies
+- `services`: Backend services
+  - `api-gateway`: Apollo Federation API Gateway (see [its docs](./services/api-gateway.md))
+  - `contents-service`: Apollo Service for contents (see [its docs](./services/contents-service.md))
+  - `reviews-service`: Apollo Service for reviews (see [its docs](./services/reviews-service.md))

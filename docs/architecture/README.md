@@ -5,6 +5,7 @@ infrastructure and software architecture.
 
 - [General](general.md)
 - [Apps](apps/README.md)
+- [Services](services/README.md)
 - [Packages](packages/README.md)
 - Database (TODO: missing documentation)
 - Data relationships (TODO: missing documentation)

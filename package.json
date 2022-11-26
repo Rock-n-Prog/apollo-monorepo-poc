@@ -17,7 +17,8 @@
     "build": "turbo run build",
     "db:generate": "turbo run generate --filter @acme/db",
     "db:seed": "turbo run seed --filter @acme/db",
-    "dev": "turbo run dev --parallel --filter @acme/web",
+    "dev": "turbo run dev:services dev:web --parralel",
+    "dev:services": "turbo run dev --filter @acme/api-gateway --filter @acme/*-service",
     "dev:web": "turbo run dev --filter @acme/web",
     "format": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,md,yml}\"",
     "format:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md,yml}\"",
@@ -52,6 +53,15 @@
     ],
     "apps/web/**/*.{js,jsx,ts,tsx}": [
       "eslint --max-warnings 0 --fix apps/web/**/*.{js,jsx,ts,tsx}"
+    ],
+    "services/api-gateway/**/*.{js,ts}": [
+      "eslint --max-warnings 0 --fix services/api-gateway/**/*.{js,ts}"
+    ],
+    "services/reviews/**/*.{js,ts}": [
+      "eslint --max-warnings 0 --fix services/reviews/**/*.{js,ts}"
+    ],
+    "services/contents/**/*.{js,ts}": [
+      "eslint --max-warnings 0 --fix services/contents/**/*.{js,ts}"
     ],
     "packages/db/**/*.{js,ts}": [
       "eslint --max-warnings 0 --fix packages/db/**/*.{js,ts}"
