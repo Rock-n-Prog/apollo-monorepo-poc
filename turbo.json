@@ -22,6 +22,9 @@
     "generate": {
       "outputs": []
     },
+    "generate:watch": {
+      "outputs": []
+    },
     "migrate:dev": {
       "dependsOn": ["^generate"],
       "env": ["DATABASE_URL"],

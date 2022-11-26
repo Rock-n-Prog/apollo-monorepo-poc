@@ -1,0 +1,11 @@
+query Reviews {
+    reviews {
+        id
+        score
+        comments
+        content {
+            id
+            title
+        }
+    }
+}

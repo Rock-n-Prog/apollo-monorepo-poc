@@ -1,6 +1,7 @@
 {
   "acme": "ACME",
   "loading": "Tapeu...",
+  "notFound": "Pas trouvé :(",
   "switchLocale": "Changer la locale!",
   "switchThemeMode": "Changer le thème!",
   "weGotError": "On a une erreur: {{error}}"

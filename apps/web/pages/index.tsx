@@ -15,11 +15,11 @@ function IndexPage() {
       <Header1>{t('acme', { ns: 'common' })}</Header1>
       <Header2>{t('index')}</Header2>
       <Flex direction="column">
-        <Link href="/hello/MyName">
-          <Button>{t('goToHelloPage')}</Button>
+        <Link href="/contents">
+          <Button>{t('goToContentsPage')}</Button>
         </Link>
-        <Link href="/users">
-          <Button>{t('goToUsersPage')}</Button>
+        <Link href="/reviews">
+          <Button>{t('goToReviewsPage')}</Button>
         </Link>
       </Flex>
     </>

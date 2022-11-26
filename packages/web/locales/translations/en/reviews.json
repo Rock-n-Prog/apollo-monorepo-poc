@@ -1,0 +1,8 @@
+{
+  "review": {
+    "comments": "Comments",
+    "score": "Score: {{score}}",
+    "year": "Year: {{year}}"
+  },
+  "reviews": "Reviews"
+}

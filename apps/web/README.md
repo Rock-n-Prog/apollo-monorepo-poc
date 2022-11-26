@@ -12,9 +12,21 @@ This app uses:
 
 ```bash
 pnpm install
+
+# Copy env vars
+pnpm env:local
 ```
 
 ## Available scripts
+
+### Generate GraphQL types and hooks
+
+```bash
+pnpm generate
+
+# To --watch
+pnpm generate:watch
+```
 
 ### Run
 
