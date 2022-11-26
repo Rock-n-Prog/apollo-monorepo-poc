@@ -1,7 +1,7 @@
 import * as React from 'react';
 import type { AppProps } from 'next/app';
 import { appWithTranslation } from 'next-i18next';
-import {ApolloClient, ApolloProvider, InMemoryCache} from '@apollo/client';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { ThemeProvider } from '@acme/web-ui/contexts/ThemeProvider';
 import { Container } from '@acme/web-ui/components/layouts';
 import { SnackbarProvider } from '@acme/web-ui/contexts/SnackbarProvider';

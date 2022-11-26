@@ -1,11 +1,11 @@
-import * as React from "react";
+import * as React from 'react';
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
 import { useTranslation } from 'next-i18next';
 import { Header1, Header2, Body1 } from '@acme/web-ui/components/typography';
 import type { WithLocale } from '@acme/web-locales/types/locales';
-import { Flex } from "@acme/web-ui/components/layouts";
-import { Alert } from "@acme/web-ui/components/feedback";
-import {useContentQuery} from "../../gql/generated/graphql";
+import { Flex } from '@acme/web-ui/components/layouts';
+import { Alert } from '@acme/web-ui/components/feedback';
+import { useContentQuery } from '../../gql/generated/graphql';
 import createServerSideTranslations from '../../utils/createServerSideTranslations';
 
 type PathProps = {
@@ -24,7 +24,7 @@ function NamePage({ id = '' }: InferGetStaticPropsType<typeof getStaticProps>) {
         <Body1>{t('loading', { ns: 'common' })}</Body1>
       ) : (
         <Flex direction="column">
-          <Body1>{t('content.year', {year: data?.content?.year })}</Body1>
+          <Body1>{t('content.year', { year: data?.content?.year })}</Body1>
           <Body1>{t('content.reviews')}</Body1>
           {data?.content?.reviews?.map(review => (
             <React.Fragment key={review.id}>

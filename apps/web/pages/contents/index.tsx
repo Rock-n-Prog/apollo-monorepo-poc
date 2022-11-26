@@ -1,11 +1,11 @@
 import * as React from 'react';
-import Link from "next/link";
+import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { Body1, Header1, Header2 } from '@acme/web-ui/components/typography';
 import type { WithLocale } from '@acme/web-locales/types/locales';
 import { Alert } from '@acme/web-ui/components/feedback';
-import {Flex} from "@acme/web-ui/components/layouts";
-import {Button} from "@acme/web-ui/components/inputs";
+import { Flex } from '@acme/web-ui/components/layouts';
+import { Button } from '@acme/web-ui/components/inputs';
 import createServerSideTranslations from '../../utils/createServerSideTranslations';
 import { useContentsQuery } from '../../gql/generated/graphql';
 
