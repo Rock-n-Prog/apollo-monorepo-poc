@@ -2,6 +2,7 @@ import { gql } from 'apollo-server';
 
 const typeDefs = gql`
   type Query {
+    content(id: ID!): Content
     contents: [Content]
   }
 
