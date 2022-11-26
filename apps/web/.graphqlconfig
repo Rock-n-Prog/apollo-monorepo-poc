@@ -1,0 +1,15 @@
+{
+  "name": "ACME API Gateway",
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "local": {
+        "url": "http://localhost:4000/graphql",
+        "headers": {
+          "user-agent": "JS GraphQL"
+        },
+        "introspect": true
+      }
+    }
+  }
+}
