@@ -5,12 +5,14 @@
     "build": "tsc",
     "build:watch": "tsc -w && nodemon dist/index.js",
     "dev": "ts-node index.ts",
+    "env:local": "cp .env.local .env",
     "lint": "eslint --max-warnings 0 --ext js,ts .",
     "lint:fix": "eslint --max-warnings 0 --fix --ext js,ts ."
   },
   "dependencies": {
     "@apollo/gateway": "^2.2.1",
     "apollo-server": "^3.11.1",
+    "dotenv": "^16.0.3",
     "graphql": "^16.6.0"
   },
   "devDependencies": {

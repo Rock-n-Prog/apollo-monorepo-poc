@@ -10,6 +10,11 @@
       "outputs": [".next/**"],
       "env": ["NODE_ENV", "VERCEL_URL", "RENDER_INTERNAL_HOSTNAME", "PORT"]
     },
+    "@acme/api-gateway#build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"],
+      "env": ["CONTENTS_URL", "REVIEWS_URL"]
+    },
     "dev": {
       "dependsOn": ["^build"],
       "cache": false
@@ -29,6 +34,9 @@
       "outputs": []
     },
     "lint:fix": {
+      "outputs": []
+    },
+    "env:local": {
       "outputs": []
     },
     "storybook": {
