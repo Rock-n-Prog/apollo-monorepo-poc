@@ -1,12 +1,6 @@
 import { ApolloServer, gql } from 'apollo-server';
 import { buildFederatedSchema } from '@apollo/federation';
-
-// TODO: Link to db
-const contents = [
-  { id: '1', title: 'Batman', year: '1989' },
-  { id: '2', title: 'Batman Returns', year: '1992' },
-  { id: '3', title: 'Batman: The Animated Series', year: '1992' },
-];
+import { PrismaClient } from '.prisma/client/contents';
 
 const typeDefs = gql`
   type Query {
@@ -16,24 +10,34 @@ const typeDefs = gql`
   type Content @key(fields: "id") {
     id: ID!
     title: String
-    year: String
+    year: Int
   }
 `;
 
 // TODO: Probably will need codegen for resolve types: https://the-guild.dev/graphql/codegen/plugins/typescript/typescript-resolvers
 const resolvers = {
   Query: {
-    contents: () => contents,
-  },
-  Content: {
     // TODO: Remove any
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    __resolveReference: (content: any) => contents.find(c => c.id === content.id),
+    contents: (_parent: any, _args: any, ctx: { prisma: PrismaClient }) => ctx.prisma.content.findMany(),
+  },
+  Content: {
+    // TODO: Does this work? Trying to resolve "reviews"
+    // TODO: Remove any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    __resolveReference: (content: any, _args: any, ctx: { prisma: PrismaClient }) => ctx.prisma.content.findUnique({
+      where: {
+        id: content.id,
+      },
+    }),
   },
 };
 
 const server = new ApolloServer({
   schema: buildFederatedSchema([{ typeDefs, resolvers }]),
+  context: {
+    prisma: new PrismaClient(),
+  },
 });
 
 // TODO: Port should come from env
