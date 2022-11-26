@@ -8,8 +8,8 @@ Made with love by [Fabien Roy](https://github.com/ExiledNarwal28).
 
 ## Status
 
-| Name             | Type    | Status                                                                                                                                                                                                                         |
-| ---------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Name             | Type    | Status                                                                                                                                                                                                                                             |
+| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | General          | General | [![General](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/general.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/general.yml)                                                         |
 | Web              | App     | [![Build Web App](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-apps-web.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-apps-web.yml)                                     |
 | API Gateway      | Service | [![Build API Gateway](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-services-api-gateway.yml/badge.svg)](https://github.com/Rock-n-Prog/apollo-monorepo-poc/actions/workflows/build-services-api-gateway.yml)         |
