@@ -7,7 +7,7 @@ const typeDefs = gql`
 
   type Review {
     id: ID!
-    score: Float
+    score: Float!
     comments: [String]
   }
 

@@ -7,8 +7,8 @@ const typeDefs = gql`
 
   type Content @key(fields: "id") {
     id: ID!
-    title: String
-    year: Int
+    title: String!
+    year: Int!
   }
 `;
 
