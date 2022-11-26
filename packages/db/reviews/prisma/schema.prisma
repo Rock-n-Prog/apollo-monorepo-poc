@@ -1,12 +1,10 @@
 datasource db {
   provider             = "mysql"
   url                  = env("DATABASE_URL")
-  referentialIntegrity = "prisma"
 }
 
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["referentialIntegrity"]
   output          = "../../../../node_modules/.prisma/client/reviews"
 }
 
@@ -20,6 +18,6 @@ model Review {
 model Comment {
   id            String    @id @default(cuid())
   title         String
-  review        Review    @relation(fields: [reviewId], references: [id])
+  review        Review    @relation(fields: [reviewId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   reviewId      String
 }
