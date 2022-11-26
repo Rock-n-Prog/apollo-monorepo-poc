@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "codegen": "graphql-codegen",
-    "codegen:watch": "graphql-codegen --watch",
     "dev": "next dev",
+    "env:local": "cp .env.local .env",
+    "generate": "graphql-codegen",
+    "generate:watch": "graphql-codegen --watch",
     "lint": "next lint --max-warnings 0",
     "lint:fix": "next lint --max-warnings 0 --fix",
     "start": "next start",

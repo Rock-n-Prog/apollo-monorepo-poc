@@ -79,6 +79,14 @@ pnpm db:migrate:dev
 pnpm db:seed
 ```
 
+### Setup web GraphQL types and hooks
+
+Be sure that services and API Gateway are running first!
+
+```bash
+pnpm web:generate
+```
+
 ## Available scripts
 
 ### Run services

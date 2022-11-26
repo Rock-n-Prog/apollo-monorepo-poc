@@ -34,6 +34,7 @@
     "lint:staged": "lint-staged",
     "prepare": "husky install",
     "storybook": "turbo run storybook --filter @acme/web-ui --no-deps",
+    "web:generate": "turbo run generate --filter @acme/web",
     "yeet": "find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \\; && find . -name '.turbo' -type d -prune -print -exec rm -rf '{}' \\; && find . -name 'dist' -type d -prune -print -exec rm -rf '{}' \\;"
   },
   "devDependencies": {

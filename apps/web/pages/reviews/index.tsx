@@ -9,7 +9,6 @@ import {Button} from "@acme/web-ui/components/inputs";
 import createServerSideTranslations from '../../utils/createServerSideTranslations';
 import { useReviewsQuery } from '../../gql/generated/graphql';
 
-// TODO: Build contents page
 function ReviewsPage() {
   const { t } = useTranslation('reviews');
   const { data, loading, error } = useReviewsQuery();
