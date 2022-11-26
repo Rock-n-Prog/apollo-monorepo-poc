@@ -2,7 +2,6 @@ POC - TODO
 
 - Cleanups
 
-  - Safe types in resolvers (services)
   - Env vars for props
   - Script for copying .env.example (or .env.local?) to .env
 

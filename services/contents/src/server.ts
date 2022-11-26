@@ -1,9 +1,9 @@
 import { ApolloServer } from 'apollo-server';
-import { builder } from './schema-pothos';
+import { builder } from './schema';
 import { createContext } from './context';
 
 const server = new ApolloServer({
-  schema: builder.toSchema(),
+  schema: builder.toSubGraphSchema({}),
   context: createContext(),
 });
 
