@@ -1,0 +1,12 @@
+query Content($id: String!) {
+    content(id: $id) {
+        id
+        title
+        year
+        reviews {
+            id
+            score
+            comments
+        }
+    }
+}

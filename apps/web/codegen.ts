@@ -6,11 +6,14 @@ const config: CodegenConfig = {
   documents: [
     './gql/queries/**/*.gql'
   ],
-  ignoreNoDocuments: true, // for better experience with the watcher
   generates: {
     './gql/generated/': {
       preset: 'client',
-      plugins: []
+      plugins: [
+        'typescript',
+        'typescript-operations',
+        'typescript-react-apollo',
+      ],
     }
   }
 }

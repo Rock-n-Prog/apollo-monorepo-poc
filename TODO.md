@@ -2,6 +2,5 @@ POC - TODO
 
 - Use GQL in web app
 
-  - Setup codegen
-  - Add example query
+  - BUG: See why codegen creates double definitions (need to manually remove)
   - Add example mutation
