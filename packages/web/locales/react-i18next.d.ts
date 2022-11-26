@@ -2,6 +2,8 @@ import 'react-i18next';
 import common from './translations/en/common.json';
 import forms from './translations/en/forms.json';
 import index from './translations/en/index.json';
+import contents from './translations/en/contents.json';
+import reviews from './translations/en/reviews.json';
 import hello from './translations/en/hello.json';
 import users from './translations/en/users.json';
 
@@ -14,6 +16,8 @@ declare module 'react-i18next' {
       readonly common: typeof common;
       readonly forms: typeof forms & typeof common;
       readonly index: typeof index & typeof common;
+      readonly contents: typeof contents & typeof common;
+      readonly reviews: typeof reviews & typeof common;
       readonly hello: typeof hello & typeof common;
       readonly users: typeof users & typeof common;
     };
