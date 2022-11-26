@@ -1,6 +1,7 @@
 {
   "acme": "ACME",
   "loading": "Loading...",
+  "notFound": "Not found",
   "switchLocale": "Switch locale!",
   "switchThemeMode": "Switch theme mode!",
   "weGotError": "We got error: {{error}}"

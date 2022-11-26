@@ -1,3 +1,9 @@
 {
+  "content": {
+    "comments": "Commentaires",
+    "reviews": "Critiques",
+    "score": "Score: {{score}}",
+    "year": "Année: {{year}}"
+  },
   "contents": "Contenu"
 }

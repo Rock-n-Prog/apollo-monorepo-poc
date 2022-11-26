@@ -13,10 +13,9 @@ type PathProps = {
 };
 
 function NamePage({ id = '' }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { t } = useTranslation('hello');
+  const { t } = useTranslation('contents', { keyPrefix: 'content' });
   const { data, loading, error } = useContentQuery({ variables: { id } });
 
-  // TODO: Add not found translation key (+ others)
   return (
     <>
       <Header1>{t('acme', { ns: 'common' })}</Header1>
@@ -25,10 +24,12 @@ function NamePage({ id = '' }: InferGetStaticPropsType<typeof getStaticProps>) {
         <Body1>{t('loading', { ns: 'common' })}</Body1>
       ) : (
         <Flex direction="column">
-          <Body1>{data?.content?.year}</Body1>
+          <Body1>{t('year', {year: data?.content?.year })}</Body1>
+          <Body1>{t('reviews')}</Body1>
           {data?.content?.reviews?.map(review => (
             <React.Fragment key={review.id}>
-              <Body1>{review.score}</Body1>
+              <Body1>{t('score', { score: review.score })}</Body1>
+              <Body1>{t('comments')}</Body1>
               {review.comments?.map((comment, i) => (
                 <Body1 key={`${review.id}-${i}`}>{comment}</Body1>
               ))}
@@ -53,7 +54,7 @@ async function getStaticProps({ params, locale }: WithLocale<GetStaticPropsConte
   return {
     props: {
       id: params?.id,
-      ...(await createServerSideTranslations({ locale, namespaces: ['common', 'hello'] })),
+      ...(await createServerSideTranslations({ locale, namespaces: ['common', 'contents'] })),
     },
     revalidate: 1,
   };
