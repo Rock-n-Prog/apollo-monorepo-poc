@@ -12,9 +12,16 @@ generator client {
 
 model Review {
   id            String    @id @default(cuid())
-  contentId     String
   title         String
   year          Int
   score         Float
-  comments      String[]
+  comments      Comment[]
+  contentId     String
+}
+
+model Comment {
+  id            String    @id @default(cuid())
+  title         String
+  review        Review    @relation(fields: [reviewId], references: [id])
+  reviewId      String
 }

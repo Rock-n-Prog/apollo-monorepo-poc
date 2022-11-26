@@ -17,6 +17,7 @@
   "scripts": {
     "build": "turbo run build",
     "db:generate": "turbo run generate --filter @acme/*-db",
+    "db:migrate:dev": "turbo run migrate:dev --filter @acme/*-db",
     "db:seed": "turbo run seed --filter @acme/*-db",
     "dev": "turbo run dev:services dev:web --parralel",
     "dev:services": "turbo run dev --filter @acme/api-gateway --filter @acme/*-service",

@@ -1,7 +1,9 @@
 version: '3.8'
 
 volumes:
-  database:
+  contents_db:
+    driver: local
+  reviews_db:
     driver: local
 
 services:
@@ -16,7 +18,7 @@ services:
       MYSQL_DATABASE: acme_contents
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
     volumes:
-      - database:/var/lib/mysql
+      - contents_db:/var/lib/mysql
 
   reviews_db:
     platform: linux/amd64
@@ -29,4 +31,4 @@ services:
       MYSQL_DATABASE: acme_contents
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
     volumes:
-      - database:/var/lib/mysql
+      - reviews_db:/var/lib/mysql
