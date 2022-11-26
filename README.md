@@ -9,7 +9,7 @@ Made with love by [Fabien Roy](https://github.com/ExiledNarwal28).
 ## Status
 
 | Name             | Type    | Status                                                                                                                                                                                                                         |
-|------------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | General          | General | [![General](https://github.com/treeview-app/treeview/actions/workflows/general.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/general.yml)                                                         |
 | Web              | App     | [![Build Web App](https://github.com/treeview-app/treeview/actions/workflows/build-apps-web.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-apps-web.yml)                                     |
 | API Gateway      | Service | [![Build API Gateway](https://github.com/treeview-app/treeview/actions/workflows/build-services-api-gateway.yml/badge.svg)](https://github.com/treeview-app/treeview/actions/workflows/build-services-api-gateway.yml)         |

@@ -1,6 +1,7 @@
 # Docs
 
-Docs are hosted on [https://rock-n-prog.github.io/apollo-monorepo-poc](https://rock-n-prog.github.io/apollo-monorepo-poc), if you prefer
+Docs are hosted on
+[https://rock-n-prog.github.io/apollo-monorepo-poc](https://rock-n-prog.github.io/apollo-monorepo-poc), if you prefer
 that.
 
 Here is our documentation!
