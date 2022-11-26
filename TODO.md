@@ -7,7 +7,6 @@ POC - TODO
 
 - Link database
 
-  - Test and document db packages
   - Use them accordingly in services
 
 - Use GQL in web app
