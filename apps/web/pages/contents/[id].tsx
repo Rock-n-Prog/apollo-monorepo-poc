@@ -13,7 +13,7 @@ type PathProps = {
 };
 
 function NamePage({ id = '' }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { t } = useTranslation('contents', { keyPrefix: 'content' });
+  const { t } = useTranslation('contents');
   const { data, loading, error } = useContentQuery({ variables: { id } });
 
   return (
@@ -24,12 +24,12 @@ function NamePage({ id = '' }: InferGetStaticPropsType<typeof getStaticProps>) {
         <Body1>{t('loading', { ns: 'common' })}</Body1>
       ) : (
         <Flex direction="column">
-          <Body1>{t('year', {year: data?.content?.year })}</Body1>
-          <Body1>{t('reviews')}</Body1>
+          <Body1>{t('content.year', {year: data?.content?.year })}</Body1>
+          <Body1>{t('content.reviews')}</Body1>
           {data?.content?.reviews?.map(review => (
             <React.Fragment key={review.id}>
-              <Body1>{t('score', { score: review.score })}</Body1>
-              <Body1>{t('comments')}</Body1>
+              <Body1>{t('content.score', { score: review.score })}</Body1>
+              <Body1>{t('content.comments')}</Body1>
               {review.comments?.map((comment, i) => (
                 <Body1 key={`${review.id}-${i}`}>{comment}</Body1>
               ))}
