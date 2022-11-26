@@ -1,10 +1,9 @@
 import { ApolloServer } from 'apollo-server';
-import { buildFederatedSchema } from '@apollo/federation';
-import * as schema from './schema';
+import { builder } from './schema-pothos';
 import { createContext } from './context';
 
 const server = new ApolloServer({
-  schema: buildFederatedSchema([schema]),
+  schema: builder.toSchema(),
   context: createContext(),
 });
 
