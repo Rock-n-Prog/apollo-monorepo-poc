@@ -9,6 +9,6 @@ const server = new ApolloServer({
 });
 
 // TODO: Port should come from env
-server.listen(4001).then(({ url }) => {
-  console.log(`🚀 Contents service ready at ${url}`);
+server.listen(4002).then(({ url }) => {
+  console.log(`🚀 Reviews service ready at ${url}`);
 });

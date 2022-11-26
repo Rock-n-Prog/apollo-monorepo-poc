@@ -1,4 +1,4 @@
-import { PrismaClient } from '.prisma/client/contents';
+import { PrismaClient } from '.prisma/client/reviews';
 
 function createContext() {
   return {
