@@ -10,6 +10,8 @@ services:
   contents_db:
     platform: linux/amd64
     image: mysql:8.0.28
+    cap_add:
+      - SYS_NICE
     container_name: acme_contents_mysql
     restart: always
     ports:
@@ -23,12 +25,14 @@ services:
   reviews_db:
     platform: linux/amd64
     image: mysql:8.0.28
+    cap_add:
+      - SYS_NICE
     container_name: acme_reviews_mysql
     restart: always
     ports:
       - '3307:3306'
     environment:
-      MYSQL_DATABASE: acme_contents
+      MYSQL_DATABASE: acme_reviews
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
     volumes:
       - reviews_db:/var/lib/mysql

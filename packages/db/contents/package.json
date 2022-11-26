@@ -17,7 +17,6 @@
     "migrate:deploy": "prisma migrate deploy",
     "migrate:dev": "prisma migrate dev",
     "prebuild": "pnpm run generate",
-    "predev": "pnpm run generate",
     "push": "prisma db push",
     "seed": "tsx src/seed.ts",
     "studio": "prisma studio"

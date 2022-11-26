@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from '.prisma/client/contents';
 
 declare global {
   /* eslint-disable-next-line */

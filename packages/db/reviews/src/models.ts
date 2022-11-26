@@ -1,3 +1,3 @@
-import { Content } from '@prisma/client';
+import { Review, Comment } from '.prisma/client/reviews';
 
-export type { Content };
+export type { Review, Comment };

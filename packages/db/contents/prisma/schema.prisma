@@ -7,7 +7,7 @@ datasource db {
 generator client {
   provider        = "prisma-client-js"
   previewFeatures = ["referentialIntegrity"]
-  output          = "../../../node_modules/.prisma/client"
+  output          = "../../../../node_modules/.prisma/client/contents"
 }
 
 model Content {

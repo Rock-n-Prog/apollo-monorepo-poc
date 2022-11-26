@@ -7,13 +7,11 @@ datasource db {
 generator client {
   provider        = "prisma-client-js"
   previewFeatures = ["referentialIntegrity"]
-  output          = "../../../node_modules/.prisma/client"
+  output          = "../../../../node_modules/.prisma/client/reviews"
 }
 
 model Review {
   id            String    @id @default(cuid())
-  title         String
-  year          Int
   score         Float
   comments      Comment[]
   contentId     String

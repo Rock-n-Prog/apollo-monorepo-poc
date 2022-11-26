@@ -73,6 +73,9 @@ docker compose up
 # Generate Prisma client
 pnpm db:generate
 
+# Apply migrations
+pnpm db:migrate:dev
+
 # If wanted, generate example data
 pnpm db:seed
 ```
