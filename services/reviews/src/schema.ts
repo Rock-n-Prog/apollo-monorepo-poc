@@ -16,6 +16,13 @@ type Review = {
   readonly comments?: readonly string[];
 };
 
+// Used for inputs
+type Comment = {
+  readonly id: string;
+  readonly reviewId: string;
+  readonly title: string;
+};
+
 const ReviewType = builder.objectRef<Review>('Review').implement({
   fields: t => ({
     id: t.exposeID('id'),
@@ -30,6 +37,25 @@ const ReviewType = builder.objectRef<Review>('Review').implement({
             },
           })
           .then(comments => comments.map(c => c.title)),
+    }),
+  }),
+});
+
+const CommentType = builder.objectRef<Comment>('Comment').implement({
+  fields: t => ({
+    id: t.exposeID('id'),
+    reviewId: t.exposeID('reviewId'),
+    title: t.exposeString('title'),
+    review: t.field({
+      type: ReviewType,
+      nullable: true,
+      resolve: (comment, _args, ctx) =>
+        ctx.prisma.review
+          .findUnique({
+            where: {
+              id: comment.reviewId,
+            },
+          }),
     }),
   }),
 });
@@ -67,6 +93,31 @@ builder.queryType({
     reviews: t.field({
       type: [ReviewType],
       resolve: (_root, _args, ctx) => ctx.prisma.review.findMany(),
+    }),
+  }),
+});
+
+builder.mutationType({
+  fields: (t) => ({
+    createComment: t.field({
+      type: CommentType,
+      args: {
+        input: t.arg({
+          type: builder.inputType('CommentInput', {
+            fields: (t) => ({
+              reviewId: t.string({ required: true }),
+              title: t.string({ required: true }),
+            }),
+          }),
+          required: true,
+        }),
+      },
+      resolve: (root, args, ctx) => ctx.prisma.comment.create({
+        data: {
+          title: args.input.title,
+          reviewId: args.input.reviewId,
+        }
+      })
     }),
   }),
 });
