@@ -24,11 +24,7 @@ function ReviewWithComments({ review }: Props) {
   const { mutate } = useCreateCommentMutation();
   const { handleSubmit, control } = useForm<CommentInput>({
     mode: 'onChange',
-    resolver: zodResolver(
-      z.object({
-        title: z.string(),
-      }),
-    ),
+    resolver: zodResolver(commentInputSchema),
     defaultValues: {
       title: '',
     },
