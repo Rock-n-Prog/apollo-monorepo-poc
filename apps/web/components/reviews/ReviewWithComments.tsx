@@ -10,7 +10,7 @@ import { TextField } from '@acme/web-forms/components';
 import { useCreateCommentMutation, type Review } from '../../gql/generated/graphql';
 
 type Props = {
-  readonly review: Review;
+  readonly review: Pick<Review, 'id' | 'score' | 'comments' | 'content'>;
 };
 
 const commentInputSchema = z.object({
@@ -21,7 +21,7 @@ type CommentInput = z.infer<typeof commentInputSchema>;
 
 function ReviewWithComments({ review }: Props) {
   const { t } = useTranslation('reviews');
-  const { mutate } = useCreateCommentMutation();
+  const [mutate] = useCreateCommentMutation();
   const { handleSubmit, control } = useForm<CommentInput>({
     mode: 'onChange',
     resolver: zodResolver(commentInputSchema),
@@ -31,9 +31,13 @@ function ReviewWithComments({ review }: Props) {
   });
 
   function onSubmit(input: CommentInput) {
-    mutate({
-      title: input.title,
-      reviewId: review.id,
+    return mutate({
+      variables: {
+        input: {
+          title: input.title,
+          reviewId: review.id,
+        },
+      },
     });
   }
 
