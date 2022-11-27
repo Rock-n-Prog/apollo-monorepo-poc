@@ -50,12 +50,11 @@ const CommentType = builder.objectRef<Comment>('Comment').implement({
       type: ReviewType,
       nullable: true,
       resolve: (comment, _args, ctx) =>
-        ctx.prisma.review
-          .findUnique({
-            where: {
-              id: comment.reviewId,
-            },
-          }),
+        ctx.prisma.review.findUnique({
+          where: {
+            id: comment.reviewId,
+          },
+        }),
     }),
   }),
 });
@@ -98,13 +97,13 @@ builder.queryType({
 });
 
 builder.mutationType({
-  fields: (t) => ({
+  fields: t => ({
     createComment: t.field({
       type: CommentType,
       args: {
         input: t.arg({
           type: builder.inputType('CommentInput', {
-            fields: (t) => ({
+            fields: t => ({
               reviewId: t.string({ required: true }),
               title: t.string({ required: true }),
             }),
@@ -112,12 +111,13 @@ builder.mutationType({
           required: true,
         }),
       },
-      resolve: (root, args, ctx) => ctx.prisma.comment.create({
-        data: {
-          title: args.input.title,
-          reviewId: args.input.reviewId,
-        }
-      })
+      resolve: (root, args, ctx) =>
+        ctx.prisma.comment.create({
+          data: {
+            title: args.input.title,
+            reviewId: args.input.reviewId,
+          },
+        }),
     }),
   }),
 });
