@@ -12,14 +12,14 @@ type PathProps = {
   readonly id: string;
 };
 
-function NamePage({ id = '' }: InferGetStaticPropsType<typeof getStaticProps>) {
+function ContentPage({ id = '' }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { t } = useTranslation('contents');
   const { data, loading, error } = useContentQuery({ variables: { id } });
 
   return (
     <>
       <Header1>{t('acme', { ns: 'common' })}</Header1>
-      <Header2>{data?.content?.title ?? t('notFound', { ns: 'common' })}</Header2>
+      <Header2>{loading ? '' : data?.content?.title ?? t('notFound', { ns: 'common' })}</Header2>
       {loading ? (
         <Body1>{t('loading', { ns: 'common' })}</Body1>
       ) : (
@@ -61,4 +61,4 @@ async function getStaticProps({ params, locale }: WithLocale<GetStaticPropsConte
 }
 
 export { getStaticPaths, getStaticProps };
-export default NamePage;
+export default ContentPage;

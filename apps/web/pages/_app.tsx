@@ -10,7 +10,9 @@ import { Toolbar } from '../components/dev-tools/Toolbar';
 
 function App({ Component, pageProps }: AppProps) {
   const client = new ApolloClient({
-    uri: process.env.API_URL,
+    // TODO: See why API_URL doesn't work. Something with client-side
+    // uri: process.env.API_URL,
+    uri: 'http://localhost:4000/graphql',
     cache: new InMemoryCache(),
   });
 
