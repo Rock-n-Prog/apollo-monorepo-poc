@@ -41,22 +41,21 @@ function ReviewWithComments({ review }: Props) {
     });
   }
 
-  // TODO: TextField Label
   return (
     <>
-      <Body1>{t('review.score', { score: review.score })}</Body1>
-      <Body1>{t('review.comments')}</Body1>
       <Link href={`/contents/${review.content?.id}`}>
         <Button variant="text">{review.content?.title}</Button>
       </Link>
+      <Body1>{t('review.score', { score: review.score })}</Body1>
+      <Body1>{t('review.comments')}</Body1>
       {review.comments?.map((comment, i) => (
         <React.Fragment key={`${review.id}-${i}`}>
           <Body1>{comment}</Body1>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <TextField control={control} name="title" label="Label" />
-          </form>
         </React.Fragment>
       ))}
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <TextField control={control} name="title" label={t('review.yourComment')} />
+      </form>
     </>
   );
 }
