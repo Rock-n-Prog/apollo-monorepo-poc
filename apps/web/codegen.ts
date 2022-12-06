@@ -5,7 +5,7 @@ dotenv.config();
 
 const config: CodegenConfig = {
   schema: process.env.API_URL,
-  documents: ['./gql/queries/**/*.gql'],
+  documents: ['./gql/queries/**/*.gql', './gql/mutations/**/*.gql'],
   generates: {
     './gql/generated/': {
       preset: 'client',
