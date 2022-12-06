@@ -10,7 +10,7 @@ import { ReviewWithComments } from '../../components/reviews/ReviewWithComments'
 
 function ReviewsPage() {
   const { t } = useTranslation('reviews');
-  const { data, loading, error } = useReviewsQuery();
+  const { data, loading, error, refetch } = useReviewsQuery();
 
   return (
     <>
@@ -21,7 +21,7 @@ function ReviewsPage() {
       ) : (
         <Flex direction="column">
           {data?.reviews.map(review => (
-            <ReviewWithComments key={review.id} review={review} />
+            <ReviewWithComments key={review.id} review={review} onSubmitComment={refetch} />
           ))}
         </Flex>
       )}

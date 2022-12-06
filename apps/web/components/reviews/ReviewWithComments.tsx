@@ -11,6 +11,7 @@ import { useCreateCommentMutation, type Review } from '../../gql/generated/graph
 
 type Props = {
   readonly review: Pick<Review, 'id' | 'score' | 'comments' | 'content'>;
+  readonly onSubmitComment: () => unknown;
 };
 
 const commentInputSchema = z.object({
@@ -19,14 +20,19 @@ const commentInputSchema = z.object({
 
 type CommentInput = z.infer<typeof commentInputSchema>;
 
-function ReviewWithComments({ review }: Props) {
+function ReviewWithComments({ review, onSubmitComment }: Props) {
   const { t } = useTranslation('reviews');
-  const [mutate] = useCreateCommentMutation();
-  const { handleSubmit, control } = useForm<CommentInput>({
+  const { handleSubmit, control, reset } = useForm<CommentInput>({
     mode: 'onChange',
     resolver: zodResolver(commentInputSchema),
     defaultValues: {
       title: '',
+    },
+  });
+  const [mutate] = useCreateCommentMutation({
+    onCompleted: () => {
+      reset();
+      onSubmitComment();
     },
   });
 
