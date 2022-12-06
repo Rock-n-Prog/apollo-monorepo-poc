@@ -10,8 +10,7 @@ const withTM = require('next-transpile-modules')([
 module.exports = withTM({
   reactStrictMode: true,
   i18n,
-  webpack: config => {
-    config.externals = [...(config.externals || []), '@prisma/client'];
-    return config;
+  compiler: {
+    styledComponents: true,
   },
 });

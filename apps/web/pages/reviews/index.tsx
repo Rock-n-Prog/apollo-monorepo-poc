@@ -23,11 +23,11 @@ function ReviewsPage() {
         <Flex direction="column">
           {data?.reviews.map(review => (
             <React.Fragment key={review.id}>
-              <Body1>{t('review.score', { score: review.score })}</Body1>
-              <Body1>{t('review.comments')}</Body1>
               <Link href={`/contents/${review.content?.id}`}>
                 <Button variant="text">{review.content?.title}</Button>
               </Link>
+              <Body1>{t('review.score', { score: review.score })}</Body1>
+              <Body1>{t('review.comments')}</Body1>
               {review.comments?.map((comment, i) => (
                 <Body1 key={`${review.id}-${i}`}>{comment}</Body1>
               ))}

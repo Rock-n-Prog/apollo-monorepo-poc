@@ -89,7 +89,7 @@ pnpm web:generate
 
 ## Available scripts
 
-### Run services
+### Run apps
 
 ```bash
 pnpm dev
@@ -99,7 +99,7 @@ pnpm dev:web
 pnpm dev:mobile
 ```
 
-### Run services / apps
+### Run services / API Gateway
 
 ```bash
 pnpm dev
